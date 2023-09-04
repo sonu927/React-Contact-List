@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { createUser } from "../api";
+import "font-awesome/css/font-awesome.min.css";
 import "../CreateContact.css";
 
 const CreateContact = ({ onContactCreated }) => {
@@ -47,10 +48,10 @@ const CreateContact = ({ onContactCreated }) => {
 
   if (!add) {
     return (
-      <div>
+      <div className="enable-add-contact">
         <button onClick={addClick}>
           <i class="fas fa-plus"></i>
-          Add Contact
+          {"  "} Add Contact
         </button>
       </div>
     );

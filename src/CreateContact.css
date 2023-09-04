@@ -57,3 +57,20 @@
   background-color: #38598b;
   color: #e7eaf6;
 }
+
+.enable-add-contact {
+  margin: 2%;
+  padding: 1%;
+  width: 100%;
+  margin-left: -5px;
+}
+
+.enable-add-contact button {
+  width: 15%;
+  height: 35px;
+  background-color: #a2a8d3;
+  color: #e7eaf6;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}

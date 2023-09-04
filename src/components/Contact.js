@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { deleteUser, updateUser } from "../api";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "../Contact.css";
 
 const Contact = ({ user, onContactDeletion }) => {
   const [update, setUpdate] = useState(false);
@@ -67,51 +68,60 @@ const Contact = ({ user, onContactDeletion }) => {
         <img
           src="https://cdn-icons-png.flaticon.com/128/3899/3899618.png"
           alt={user.username}
-          width={50}
-          height={50}
+          // width={50}
+          // height={50}
         />
       </div>
       <div className="details-container">
-        <div>
-          {update ? (
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          ) : (
-            name
-          )}
+        <div className="details">
+          <div>
+            {update ? (
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            ) : (
+              name
+            )}
+          </div>
+          <div>
+            {update ? (
+              <input
+                type="text"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            ) : (
+              phone
+            )}
+          </div>
+          <div>
+            {update ? (
+              <input
+                type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            ) : (
+              email
+            )}
+          </div>
         </div>
-        <div>
+
+        <div className="buttons">
           {update ? (
-            <input
-              type="text"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-            />
-          ) : (
-            phone
-          )}
-        </div>
-        <div>
-          {update ? (
-            <input
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          ) : (
-            email
-          )}
-        </div>
-        <div>
-          {update ? (
-            <button onClick={updateContact}>Save</button>
+            <button onClick={updateContact}>
+              <i class="fa-solid fa-bookmark"></i> Save
+            </button>
           ) : (
             <>
-              <button onClick={setEditMode}>Edit</button>
-              <button onClick={deleteContact}>Delele</button>
+              <button onClick={setEditMode}>
+                <i class="fa-solid fa-pen"></i> Edit
+              </button>
+              <button onClick={deleteContact}>
+                <i class="fa-solid fa-trash"></i> Delele
+              </button>
             </>
           )}
         </div>
