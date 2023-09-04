@@ -1,0 +1,59 @@
+.create-contact-container {
+  margin: 2%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.contact-form {
+  width: 70%;
+  height: 90%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #e7eaf6;
+  background-color: #a2a8d3;
+  box-shadow: 2px 2px 5px 2px black;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+  width: 50%;
+  font-size: large;
+  font-weight: bold;
+}
+
+.left label {
+  margin-right: 3%;
+}
+
+.left input {
+  border: none;
+  height: 70%;
+  padding: 5px;
+  border-radius: 20px;
+}
+
+.right {
+  width: 20%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.right input {
+  width: 50%;
+  height: 30%;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  background-color: #38598b;
+  color: #e7eaf6;
+}
